@@ -4,8 +4,10 @@ export default function createIteratorObject(report) {
   return {
     * [Symbol.iterator]() {
       for (const department in allEmployees) {
-        for (const employee of allEmployees[department]) {
-          yield employee;
+        if (Object.hasOwnProperty.call(allEmployees, department)) {
+          for (const employee of allEmployees[department]) {
+            yield employee;
+          }
         }
       }
     },
