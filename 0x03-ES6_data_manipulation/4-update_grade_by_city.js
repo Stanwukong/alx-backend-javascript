@@ -11,14 +11,14 @@ function updateStudentGradeByCity(students, city, newGrades) {
     .filter((student) => student.location === city)
     .map((student) => {
       const gradeObj = newGrades.find(
-        (grade) => grade.studentId === student.id
+        (grade) => grade.studentId === student.id,
       );
 
       return {
         id: student.id,
         firstName: student.firstName,
         location: student.location,
-        grade: gradeObj ? gradeObj.grade : "N/A",
+        grade: gradeObj ? gradeObj.grade : 'N/A',
       };
     });
 }
