@@ -1,5 +1,5 @@
 // Display a welcome message
-process.stdout.write("Welcome to Holberton School, what is your name?\n");
+process.stdout.write('Welcome to Holberton School, what is your name?\n');
 
 // Listen for user input
 process.stdin.on('data', (data) => {
